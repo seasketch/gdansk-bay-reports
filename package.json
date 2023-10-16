@@ -64,15 +64,15 @@
     "@turf/boolean-disjoint": "^6.5.0",
     "@turf/boolean-valid": "^6.5.0"
   },
-  "repositoryUrl": "https://github.com/seasketch/gdansk-bay-reports.git",
+  "repositoryUrl": "https://github.com/seasketch/gdansk-bay-reports",
   "author": "Abby Vath Meyer",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seasketch/gdansk-bay-reports.git.git"
+    "url": "git+https://github.com/seasketch/gdansk-bay-reports.git"
   },
-  "homepage": "https://github.com/seasketch/gdansk-bay-reports.git#readme",
+  "homepage": "https://github.com/seasketch/gdansk-bay-reports#readme",
   "bugs": {
-    "url": "https://github.com/seasketch/gdansk-bay-reports.git/issues"
+    "url": "https://github.com/seasketch/gdansk-bay-reports/issues"
   }
 }
