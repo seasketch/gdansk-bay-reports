@@ -22,6 +22,7 @@
   "geoprocessingFunctions": [
     "src/functions/boundaryAreaOverlap.ts",
     "src/functions/impactValueOverlap.ts",
+    "src/functions/fishingEffortValueOverlap.ts",
     "src/functions/ecosystemServiceValueOverlap.ts"
   ]
 }

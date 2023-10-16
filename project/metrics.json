@@ -33,4 +33,16 @@
           "layerId": ""
       }
   ]
+},
+{
+  "metricId": "fishingEffortValueOverlap",
+  "type": "valueOverlap",
+  "classes": [
+      {
+          "classId": "fishing_effort",
+          "display": "Fishing Effort",
+          "datasourceId": "fishing_effort",
+          "layerId": ""
+      }
+  ]
 }]

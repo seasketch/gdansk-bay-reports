@@ -1,0 +1,81 @@
+{
+  "metrics": [
+    {
+      "metricId": "fishingEffortValueOverlap",
+      "sketchId": "21216",
+      "classId": "fishing_effort",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1543238.033333,
+      "extra": {
+        "sketchName": "large-mpa"
+      }
+    }
+  ],
+  "sketch": {
+    "id": 21216,
+    "bbox": [
+      18.861265,
+      54.436184,
+      19.313028,
+      54.713192
+    ],
+    "type": "Feature",
+    "properties": {
+      "4751": "large-mpa",
+      "4752": "full",
+      "id": "21216",
+      "name": "large-mpa",
+      "postId": null,
+      "userId": "531",
+      "comments": null,
+      "userSlug": "Abby",
+      "createdAt": "2023-10-16T18:00:15.820403+00:00",
+      "updatedAt": "2023-10-16T18:00:15.820403+00:00",
+      "designation": "full",
+      "collectionId": null,
+      "isCollection": false,
+      "sharedInForum": false,
+      "sketchClassId": "484",
+      "userAttributes": [
+        {
+          "label": "Comments",
+          "value": null,
+          "exportId": "comments",
+          "fieldType": "TextArea",
+          "valueLabel": null,
+          "formElementId": 4753,
+          "alternateLanguages": {
+            "pl": {
+              "label": "Uwagi",
+              "valueLabel": null
+            },
+            "ru": {
+              "label": "Комментарии",
+              "valueLabel": null
+            }
+          }
+        },
+        {
+          "label": "Designation",
+          "value": "full",
+          "exportId": "designation",
+          "fieldType": "ComboBox",
+          "valueLabel": "Fully Protected",
+          "formElementId": 4752,
+          "alternateLanguages": {
+            "pl": {
+              "label": "Przeznaczenie",
+              "valueLabel": "W pełni chroniony"
+            },
+            "ru": {
+              "label": "Обозначение",
+              "valueLabel": "Полностью защищен"
+            }
+          }
+        }
+      ]
+    },
+    "geometry": null
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "metrics": [
+    {
+      "metricId": "fishingEffortValueOverlap",
+      "value": 6019096.536665261,
+      "classId": "fishing_effort",
+      "groupId": null,
+      "geographyId": null,
+      "sketchId": null
+    }
+  ]
+}
