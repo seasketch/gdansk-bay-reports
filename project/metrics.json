@@ -3,10 +3,9 @@
   "type": "areaOverlap",
   "classes": [
       {
-          "classId": "eez",
-          "display": "EEZ",
-          "datasourceId": "global-clipping-eez-land-union",
-          "objectiveId": "eez",
+          "classId": "gdansk_bay",
+          "display": "Gdansk Bay",
+          "datasourceId": "gdansk_bay",
           "layerId": ""
       }
   ]

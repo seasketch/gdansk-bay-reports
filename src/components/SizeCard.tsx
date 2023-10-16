@@ -29,18 +29,6 @@ import Translator from "../components/TranslatorAsync";
 import { Trans, useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 
-// Hard code total area of eez
-const boundaryTotalMetrics: Metric[] = [
-  {
-    classId: "eez",
-    metricId: "boundaryAreaOverlap",
-    sketchId: null,
-    groupId: null,
-    geographyId: null,
-    value: 3032525677797.563,
-  },
-];
-
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
 const TableStyled = styled(ReportTableStyled)`
@@ -177,6 +165,8 @@ const genSingleSizeTable = (
     (m) => m.sketchId === data.sketch.properties.id
   );
 
+  const boundaryTotalMetrics = project.getPrecalcMetrics(mg, "area");
+
   const finalMetrics = sortMetricsDisplayOrder(
     [
       ...singleMetrics,
@@ -195,7 +185,6 @@ const genSingleSizeTable = (
       <ClassTable
         rows={finalMetrics}
         metricGroup={mg}
-        objective={project.getMetricGroupObjectives(mg, t)}
         columnConfig={[
           {
             columnLabel: boundaryLabel,
@@ -268,6 +257,9 @@ const genNetworkSizeTable = (
   const sketchMetrics = data.metrics.filter(
     (m) => m.sketchId && sketchIds.includes(m.sketchId)
   );
+
+  const boundaryTotalMetrics = project.getPrecalcMetrics(mg, "area");
+
   const finalMetrics = [
     ...sketchMetrics,
     ...toPercentMetric(

@@ -8,6 +8,4 @@ Once established, you can follow the tutorial to [setup an existing project on a
 
 This project uses data management [option ?](https://github.com/seasketch/geoprocessing/wiki/Tutorials#link-project-data)
 
-Data is sourced from the following locations:
-
-* ?
+Data is sourced from: GIS/MSP4BIO/Baltic Sea
