@@ -21,4 +21,16 @@
           "layerId": ""
       }
   ]
+},
+{
+  "metricId": "impactValueOverlap",
+  "type": "valueOverlap",
+  "classes": [
+      {
+          "classId": "impact_areas",
+          "display": "Impact Areas",
+          "datasourceId": "impact_areas",
+          "layerId": ""
+      }
+  ]
 }]
