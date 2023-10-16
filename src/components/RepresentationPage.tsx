@@ -1,7 +1,12 @@
 import React from "react";
+import { EcosystemServices } from "./EcosystemServices";
 
 const ReportPage = () => {
-  return <></>;
+  return (
+    <>
+      <EcosystemServices />
+    </>
+  );
 };
 
 export default ReportPage;

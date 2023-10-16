@@ -18,16 +18,8 @@
     "url": "https://d3muy0hbwp5qkl.cloudfront.net"
   },
   {
-    "src": "data/src/Data_Received/SeaSketch_data_BalticSea_PL/Clip_Study_area_PL.shp",
-    "layerName": "Clip_Study_area_PL",
-    "geo_type": "vector",
     "datasourceId": "gdansk_bay",
-    "formats": [
-      "fgb"
-    ],
-    "classKeys": [],
-    "created": "2023-10-16T17:52:32.878Z",
-    "lastUpdated": "2023-10-16T17:52:32.878Z",
+    "geo_type": "vector",
     "keyStats": {
       "total": {
         "total": {
@@ -37,6 +29,36 @@
         }
       }
     },
+    "formats": [
+      "fgb"
+    ],
+    "layerName": "Clip_Study_area_PL",
+    "classKeys": [],
+    "created": "2023-10-16T17:52:32.878Z",
+    "lastUpdated": "2023-10-16T17:52:32.878Z",
+    "src": "data/src/Data_Received/SeaSketch_data_BalticSea_PL/Clip_Study_area_PL.shp",
     "propertiesToKeep": []
+  },
+  {
+    "src": "data/src/Analytics/EcosystemServicePotential_aggreg_HELCOM.tif",
+    "band": 1,
+    "geo_type": "raster",
+    "datasourceId": "ecosystem_services",
+    "formats": [
+      "tif"
+    ],
+    "created": "2023-10-16T20:21:18.173Z",
+    "lastUpdated": "2023-10-16T20:21:18.173Z",
+    "keyStats": {
+      "total": {
+        "total": {
+          "sum": 3043.7675150483847,
+          "count": null,
+          "area": null
+        }
+      }
+    },
+    "noDataValue": -3.40282e+38,
+    "measurementType": "quantitative"
   }
 ]

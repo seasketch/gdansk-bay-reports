@@ -1,37 +1,37 @@
 {
   "metrics": [
     {
-      "metricId": "boundaryAreaOverlap",
-      "sketchId": "18927",
-      "classId": "gdansk_bay",
+      "metricId": "ecosystemServiceValueOverlap",
+      "sketchId": "21216",
+      "classId": "ecosystem_services",
       "groupId": null,
       "geographyId": null,
-      "value": 20229066.841844,
+      "value": 319.323642,
       "extra": {
-        "sketchName": "tiny"
+        "sketchName": "large-mpa"
       }
     }
   ],
   "sketch": {
-    "id": 18927,
+    "id": 21216,
     "bbox": [
-      19.257002,
-      54.3832,
-      19.401636,
-      54.447826
+      18.861265,
+      54.436184,
+      19.313028,
+      54.713192
     ],
     "type": "Feature",
     "properties": {
-      "4751": "tiny",
+      "4751": "large-mpa",
       "4752": "full",
-      "id": "18927",
-      "name": "tiny",
+      "id": "21216",
+      "name": "large-mpa",
       "postId": null,
       "userId": "531",
       "comments": null,
       "userSlug": "Abby",
-      "createdAt": "2023-09-06T17:39:45.776684+00:00",
-      "updatedAt": "2023-09-06T17:39:45.776684+00:00",
+      "createdAt": "2023-10-16T18:00:15.820403+00:00",
+      "updatedAt": "2023-10-16T18:00:15.820403+00:00",
       "designation": "full",
       "collectionId": null,
       "isCollection": false,

@@ -9,4 +9,16 @@
           "layerId": ""
       }
   ]
+}, 
+{
+  "metricId": "ecosystemServiceValueOverlap",
+  "type": "valueOverlap",
+  "classes": [
+      {
+          "classId": "ecosystem_services",
+          "display": "Ecosystem Services",
+          "datasourceId": "ecosystem_services",
+          "layerId": ""
+      }
+  ]
 }]

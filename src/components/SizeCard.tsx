@@ -98,14 +98,10 @@ export const SizeCard = () => {
               }
             >
               <p>
-                {planningUnitName}{" "}
                 <Trans i18nKey="SizeCard - introduction">
-                  national waters extend from the shoreline out to 200 nautical
-                  miles, known as the Exclusive Economic Zone (EEZ). This report
-                  summarizes offshore plan overlap with the EEZ and other
-                  boundaries within it, measuring progress towards achieving %
-                  targets for each boundary.
-                </Trans>
+                  This report summarizes plan overlap with
+                </Trans>{" "}
+                {planningUnitName}.
               </p>
               {genSingleSizeTable(data, metricGroup, t)}
               {isCollection && (
@@ -129,14 +125,14 @@ export const SizeCard = () => {
                   </a>
                 </p>
                 <Trans i18nKey="SizeCard - learn more">
+                  <p>🎯 Planning Objective: No specific objective</p>
+                  <p>🗺️ Source Data: HELCOM</p>
                   <p>
-                    {" "}
-                    This report summarizes the size and proportion of this plan
-                    within these boundaries.
-                  </p>
-                  <p>
-                    If sketch boundaries within a plan overlap with each other,
-                    the overlap is only counted once.
+                    📈 Report: The total area of the plan was calculated, along
+                    with the total area under high protection and total area
+                    under medium protection. Overlap was only counted once, and
+                    if zones of different protection levels overlap, only the
+                    highest protection level is counted.
                   </p>
                 </Trans>
               </Collapse>
@@ -192,7 +188,7 @@ const genSingleSizeTable = (
             width: 25,
           },
           {
-            columnLabel: foundWithinLabel,
+            columnLabel: areaWithinLabel,
             type: "metricValue",
             metricId: mg.metricId,
             valueFormatter: (val: string | number) =>
@@ -207,7 +203,7 @@ const genSingleSizeTable = (
             width: 20,
           },
           {
-            columnLabel: " ",
+            columnLabel: areaPercWithinLabel,
             type: "metricChart",
             metricId: project.getMetricGroupPercId(mg),
             valueFormatter: "percent",
