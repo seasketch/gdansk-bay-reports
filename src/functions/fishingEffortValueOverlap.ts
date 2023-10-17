@@ -101,8 +101,8 @@ export async function fishingEffortValueOverlap(
 }
 
 export default new GeoprocessingHandler(fishingEffortValueOverlap, {
-  title: "shipwreck",
-  description: "Find number of shipwrecks within sketch",
+  title: "fishingEffortValueOverlap",
+  description: "Find hours of fishing effort within sketch",
   timeout: 900, // seconds
   executionMode: "async",
   memory: 4096,

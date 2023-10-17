@@ -183,7 +183,7 @@ const genSingleSizeTable = (
         metricGroup={mg}
         columnConfig={[
           {
-            columnLabel: boundaryLabel,
+            columnLabel: " ",
             type: "class",
             width: 25,
           },
@@ -200,7 +200,7 @@ const genSingleSizeTable = (
                 )
               ),
             valueLabel: sqKmLabel,
-            width: 20,
+            width: 30,
           },
           {
             columnLabel: areaPercWithinLabel,
@@ -214,7 +214,7 @@ const genSingleSizeTable = (
               targetLabelStyle: "tight",
               barHeight: 11,
             },
-            width: 40,
+            width: 35,
             targetValueFormatter: (
               value: number,
               row: number,
@@ -233,7 +233,7 @@ const genSingleSizeTable = (
           },
           {
             type: "layerToggle",
-            width: 15,
+            width: 10,
             columnLabel: mapLabel,
           },
         ]}

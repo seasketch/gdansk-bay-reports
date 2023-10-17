@@ -28,13 +28,13 @@ export const FishingEffort: React.FunctionComponent = (props) => {
   const metricGroup = project.getMetricGroup("fishingEffortValueOverlap");
   const mapLabel = t("Map");
   const effort = t("Fishing Effort");
-  const percValueLabel = t("% Impact Found Within Plan");
+  const percValueLabel = t("% Within Plan");
   const hoursLabel = t("hours");
 
   return (
     <>
       <ResultsCard
-        title={t("FishingEffort")}
+        title={t("Fishing Effort")}
         functionName="fishingEffortValueOverlap"
       >
         {(data: ReportResult) => {
@@ -58,10 +58,10 @@ export const FishingEffort: React.FunctionComponent = (props) => {
             <>
               <p>
                 <Trans i18nKey="Fishing Effort Card 1">
-                  This report summarizes overlap with the impact index of Gdańsk
-                  Bay, an index for all pressures and their relationship with
-                  ecosystem components. Plans should consider the consequences
-                  of overlapping with high impact areas.
+                  This report summarizes the proportion of bottom trawling
+                  fishing effort that is within this plan. The higher the
+                  percentage, the greater the potential impact to the fishery if
+                  access or activities are restricted.
                 </Trans>
               </p>
 

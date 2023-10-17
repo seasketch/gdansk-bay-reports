@@ -58,7 +58,7 @@ export const ImpactAreas: React.FunctionComponent = (props) => {
                   {
                     columnLabel: " ",
                     type: "class",
-                    width: 40,
+                    width: 30,
                   },
                   {
                     columnLabel: percValueLabel,
@@ -68,12 +68,12 @@ export const ImpactAreas: React.FunctionComponent = (props) => {
                     chartOptions: {
                       showTitle: true,
                     },
-                    width: 45,
+                    width: 60,
                   },
                   {
                     columnLabel: mapLabel,
                     type: "layerToggle",
-                    width: 15,
+                    width: 10,
                   },
                 ]}
               />
