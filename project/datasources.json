@@ -179,8 +179,8 @@
     "keyStats": {
       "total": {
         "total": {
-          "sum": 11826109.545880124,
           "count": null,
+          "sum": 11826109.545880124,
           "area": null
         }
       }
@@ -194,5 +194,73 @@
     "created": "2023-10-17T17:58:50.186Z",
     "lastUpdated": "2023-10-17T18:25:53.530Z",
     "src": "data/src/Analytics/cleaned_density_pleas.tif"
+  },
+  {
+    "src": "data/src/Analytics/Environmental_areas_valuability.geojson",
+    "layerName": "Environmental_areas_valuability",
+    "geo_type": "vector",
+    "datasourceId": "ecological_value",
+    "formats": [
+      "fgb"
+    ],
+    "classKeys": [
+      "value"
+    ],
+    "created": "2023-10-17T18:48:00.038Z",
+    "lastUpdated": "2023-10-17T18:48:00.038Z",
+    "keyStats": {
+      "value": {
+        "1": {
+          "count": 5122,
+          "area": 1098813932.0145705
+        },
+        "2": {
+          "count": 911,
+          "area": 180007103.83230695
+        },
+        "3": {
+          "count": 1764,
+          "area": 378524579.53203654
+        },
+        "4": {
+          "count": 632,
+          "area": 128218538.08695313
+        },
+        "5": {
+          "count": 512,
+          "area": 98489666.83062498
+        },
+        "6": {
+          "count": 352,
+          "area": 71143460.3434363
+        },
+        "7": {
+          "count": 150,
+          "area": 27595199.617424686
+        },
+        "8": {
+          "count": 266,
+          "area": 48489385.75524597
+        },
+        "9": {
+          "count": 396,
+          "area": 78064880.14654462
+        },
+        "10": {
+          "count": 43,
+          "area": 9176543.69309578
+        }
+      },
+      "total": {
+        "total": {
+          "count": 10148,
+          "sum": null,
+          "area": 2118523289.8522384
+        }
+      }
+    },
+    "propertiesToKeep": [
+      "value"
+    ]
   }
 ]

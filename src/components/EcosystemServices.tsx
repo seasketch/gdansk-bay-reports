@@ -30,7 +30,7 @@ export const EcosystemServices: React.FunctionComponent = (props) => {
   return (
     <>
       <ResultsCard
-        title={t("Ecosystem Services - HELCOM")}
+        title={t("Ecological Value - HELCOM")}
         functionName="ecosystemServiceValueOverlap"
       >
         {(data: ReportResult) => {
@@ -47,9 +47,9 @@ export const EcosystemServices: React.FunctionComponent = (props) => {
             <>
               <p>
                 <Trans i18nKey="Ecosystem Services Card 1">
-                  This report summarizes the percentage of ecosystem service
-                  value that overlaps with this plan. Plans should consider
-                  protecting areas of greater ecosystem service value.
+                  This report summarizes the percentage of ecological value that
+                  overlaps with this plan. Plans should consider protecting
+                  areas of greater ecological value.
                 </Trans>
               </p>
 
@@ -88,15 +88,19 @@ export const EcosystemServices: React.FunctionComponent = (props) => {
               <Collapse title={t("Learn more")}>
                 <Trans i18nKey="Ecosystem Services Card - learn more">
                   <p>
-                    🎯 Planning Objective: There is no specific objective/target
-                    for impact areas.
+                    🎯 Planning Objective: there is no specific objective/target
+                    for ecological value.
                   </p>
-                  <p>🗺️ Source data: Baltic Sea impact index outcome layer</p>
+                  <p>
+                    🗺️ Source data: Ecological valuation map from HELCOM
+                    ecosystem service assessment.
+                  </p>
                   <p>
                     📈 Report: Percentages are calculated by summing the areas
                     of value within the MPAs in this plan, and dividing it by
-                    total impact value. If the plan includes multiple areas that
-                    overlap, the overlap is only counted once.
+                    total ecosystem services value. If the plan includes
+                    multiple areas that overlap, the overlap is only counted
+                    once.
                   </p>
                 </Trans>
               </Collapse>

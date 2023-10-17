@@ -10,6 +10,8 @@ import {
   sortMetricsDisplayOrder,
   isSketchCollection,
   MetricGroup,
+  firstMatchingMetric,
+  roundLower,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ClassTable,
@@ -21,6 +23,7 @@ import {
   useSketchProperties,
   ToolbarCard,
   DataDownload,
+  KeySection,
 } from "@seasketch/geoprocessing/client-ui";
 import styled from "styled-components";
 import project from "../../project";
@@ -68,8 +71,10 @@ export const SizeCard = () => {
   const [{ isCollection }] = useSketchProperties();
   const { t } = useTranslation();
   const metricGroup = project.getMetricGroup("boundaryAreaOverlap", t);
+  const precalcMetrics = project.getPrecalcMetrics(metricGroup, "area");
 
   const notFoundString = t("Results not found");
+  const sqKmLabel = t("km²");
 
   /* i18next-extract-disable-next-line */
   const planningUnitName = t(project.basic.planningAreaName);
@@ -82,28 +87,39 @@ export const SizeCard = () => {
       {(data: ReportResult) => {
         if (Object.keys(data).length === 0) throw new Error(notFoundString);
 
+        // Get overall area of sketch metric
+        const areaMetric = firstMatchingMetric(
+          data.metrics,
+          (m) => m.sketchId === data.sketch.properties.id && m.groupId === null
+        );
+
+        // Total area metric
+        const totalAreaMetric = firstMatchingMetric(
+          precalcMetrics,
+          (m) => m.groupId === null
+        );
+
+        // Format area metrics for key section display
+        const areaDisplay = roundLower(
+          squareMeterToKilometer(areaMetric.value)
+        );
+        const percDisplay = percentWithEdge(
+          areaMetric.value / totalAreaMetric.value
+        );
+
         return (
           <>
-            <ToolbarCard
-              title={t("Size")}
-              items={
-                <>
-                  <DataDownload
-                    filename="size"
-                    data={data.metrics}
-                    formats={["csv", "json"]}
-                    placement="left-end"
-                  />
-                </>
-              }
-            >
-              <p>
-                <Trans i18nKey="SizeCard - introduction">
-                  This report summarizes plan overlap with
-                </Trans>{" "}
+            <ToolbarCard title={t("Size")}>
+              <KeySection>
+                {t("This plan is")}{" "}
+                <b>
+                  {areaDisplay} {sqKmLabel}
+                </b>
+                {", "}
+                {t("which is")} <b>{percDisplay}</b> {t("of the")}{" "}
                 {planningUnitName}.
-              </p>
-              {genSingleSizeTable(data, metricGroup, t)}
+              </KeySection>
+
               {isCollection && (
                 <Collapse title={t("Show by MPA")}>
                   {genNetworkSizeTable(data, metricGroup, t)}
