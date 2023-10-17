@@ -24,6 +24,7 @@
     "src/functions/boundaryAreaOverlap.ts",
     "src/functions/impactValueOverlap.ts",
     "src/functions/fishingEffortValueOverlap.ts",
+    "src/functions/shippingValueOverlap.ts",
     "src/functions/ecosystemServiceValueOverlap.ts"
   ]
 }

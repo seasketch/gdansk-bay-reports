@@ -1,48 +1,80 @@
-[{
-  "metricId": "boundaryAreaOverlap",
-  "type": "areaOverlap",
-  "classes": [
-      {
-          "classId": "gdansk_bay",
-          "display": "Gdansk Bay",
-          "datasourceId": "gdansk_bay",
-          "layerId": ""
-      }
-  ]
-}, 
-{
-  "metricId": "ecosystemServiceValueOverlap",
-  "type": "valueOverlap",
-  "classes": [
-      {
-          "classId": "ecosystem_services",
-          "display": "Ecosystem Services",
-          "datasourceId": "ecosystem_services",
-          "layerId": ""
-      }
-  ]
-},
-{
-  "metricId": "impactValueOverlap",
-  "type": "valueOverlap",
-  "classes": [
-      {
-          "classId": "impact_areas",
-          "display": "Impact Areas",
-          "datasourceId": "impact_areas",
-          "layerId": ""
-      }
-  ]
-},
-{
-  "metricId": "fishingEffortValueOverlap",
-  "type": "valueOverlap",
-  "classes": [
-      {
-          "classId": "fishing_effort",
-          "display": "Bottom Trawling",
-          "datasourceId": "fishing_effort",
-          "layerId": ""
-      }
-  ]
-}]
+[
+    {
+        "metricId": "boundaryAreaOverlap",
+        "type": "areaOverlap",
+        "classes": [
+            {
+                "classId": "gdansk_bay",
+                "display": "Gdansk Bay",
+                "datasourceId": "gdansk_bay",
+                "layerId": ""
+            }
+        ]
+    },
+    {
+        "metricId": "ecosystemServiceValueOverlap",
+        "type": "valueOverlap",
+        "classes": [
+            {
+                "classId": "ecosystem_services",
+                "display": "Ecosystem Services",
+                "datasourceId": "ecosystem_services",
+                "layerId": ""
+            }
+        ]
+    },
+    {
+        "metricId": "impactValueOverlap",
+        "type": "valueOverlap",
+        "classes": [
+            {
+                "classId": "impact_areas",
+                "display": "Impact Areas",
+                "datasourceId": "impact_areas",
+                "layerId": ""
+            }
+        ]
+    },
+    {
+        "metricId": "fishingEffortValueOverlap",
+        "type": "valueOverlap",
+        "classes": [
+            {
+                "classId": "fishing_effort",
+                "display": "Bottom Trawling",
+                "datasourceId": "fishing_effort",
+                "layerId": ""
+            }
+        ]
+    },
+    {
+        "metricId": "shippingValueOverlap",
+        "type": "valueOverlap",
+        "classes": [
+            {
+                "classId": "density_all",
+                "display": "All Shipping",
+                "datasourceId": "density_all",
+                "layerId": ""
+            },
+            {
+                "classId": "density_fish",
+                "display": "Fishery Shipping",
+                "datasourceId": "density_fish",
+                "layerId": ""
+            },
+            {
+                "classId": "density_pass",
+                "display": "Passenger Shipping",
+                "datasourceId": "density_pass",
+                "layerId": ""
+            },
+            {
+                "classId": "density_pleas",
+                "display": "Touristic Shipping",
+                "datasourceId": "density_pleas",
+                "layerId": ""
+            }
+        ]
+    }
+]

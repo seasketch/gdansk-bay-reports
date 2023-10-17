@@ -17,65 +17,64 @@ import {
 } from "@seasketch/geoprocessing/client-core";
 import project from "../../project";
 import { Trans, useTranslation } from "react-i18next";
-import fishingEffortTotalMetrics from "../../data/bin/fishingEffort.json";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
-const precalcMetrics = fishingEffortTotalMetrics.metrics;
 
-export const FishingEffort: React.FunctionComponent = (props) => {
+export const ShippingDensity: React.FunctionComponent = (props) => {
   const [{ isCollection }] = useSketchProperties();
   const { t, i18n } = useTranslation();
-  const metricGroup = project.getMetricGroup("fishingEffortValueOverlap");
+
+  const metricGroup = project.getMetricGroup("shippingValueOverlap");
+  const precalcMetrics = project.getPrecalcMetrics(metricGroup, "sum");
+
   const mapLabel = t("Map");
-  const effort = t("Fishing Effort");
-  const percValueLabel = t("% Within Plan");
-  const hoursLabel = t("hours");
+  const sectorLabel = t("Sector");
+  const valueLabel = t("Ships");
+  const percLabel = t("% Ships Within Plan");
 
   return (
     <>
       <ResultsCard
-        title={t("Fishing Effort")}
-        functionName="fishingEffortValueOverlap"
+        title={t("Shipping (2018-2019)")}
+        functionName="shippingValueOverlap"
       >
         {(data: ReportResult) => {
           // Single sketch or collection top-level
-          const percMetricIdName = `${metricGroup.metricId}Perc`;
-          const parentMetrics = metricsWithSketchId(
-            [
-              ...data.metrics.filter(
-                (m) => m.metricId === metricGroup.metricId
-              ),
-              ...toPercentMetric(
-                data.metrics.filter((m) => m.metricId === metricGroup.metricId),
-                precalcMetrics,
-                percMetricIdName
-              ),
-            ],
+          const metrics = metricsWithSketchId(
+            data.metrics.filter((m) => m.metricId === metricGroup.metricId),
             [data.sketch.properties.id]
           );
+
+          const percMetricIdName = `${metricGroup.metricId}Perc`;
+          const percMetrics = metricsWithSketchId(
+            toPercentMetric(metrics, precalcMetrics, percMetricIdName),
+            [data.sketch.properties.id]
+          );
+
+          const finalMetrics = [...metrics, ...percMetrics];
 
           return (
             <>
               <p>
-                <Trans i18nKey="Fishing Effort Card 1">
-                  This report summarizes the proportion of bottom trawling
-                  fishing effort that is within this plan. The higher the
-                  percentage, the greater the potential impact to the fishery if
-                  access or activities are restricted.
+                <Trans i18nKey="Shipping Density Card 1">
+                  This report summarizes the proportion of ships over the years
+                  2018-2019 that overlap with this plan, using data on ship
+                  density in the planning area. Plans should consider the
+                  potential impact on shipping if access is restricted.
                 </Trans>
               </p>
 
               <ClassTable
-                rows={parentMetrics}
+                rows={finalMetrics}
                 metricGroup={metricGroup}
                 columnConfig={[
                   {
-                    columnLabel: " ",
+                    columnLabel: sectorLabel,
                     type: "class",
                     width: 30,
                   },
                   {
-                    columnLabel: effort,
+                    columnLabel: valueLabel,
                     type: "metricValue",
                     metricId: metricGroup.metricId,
                     valueFormatter: (val: string | number) =>
@@ -84,11 +83,10 @@ export const FishingEffort: React.FunctionComponent = (props) => {
                           typeof val === "string" ? parseInt(val) : val
                         )
                       ),
-                    valueLabel: hoursLabel,
                     width: 25,
                   },
                   {
-                    columnLabel: percValueLabel,
+                    columnLabel: percLabel,
                     type: "metricChart",
                     metricId: percMetricIdName,
                     valueFormatter: "percent",
@@ -111,22 +109,25 @@ export const FishingEffort: React.FunctionComponent = (props) => {
               )}
 
               <Collapse title={t("Learn more")}>
-                <Trans i18nKey="Fishing Effort Card - learn more">
+                <Trans i18nKey="Shipping Density Card - learn more">
                   <p>
-                    ℹ️ Overview: Hours at sea is used as a measure of fishing
-                    effort. This report is specifically focused on bottom
-                    trawling, a fishing practice that herds and captures the
-                    target species, like ground fish or crabs, by towing a net
-                    along the ocean floor (NOAA Fisheries).
+                    ℹ️ The four types of shipping vessels noted in this report
+                    are: passenger shipping, touristic shipping (coastal
+                    recreation), fishery shipping (for all activities including
+                    the tracks from the ports to fishery grounds), and all
+                    shipping registered by the AIS system.
                   </p>
                   <p>🎯 Planning Objective: No specific planning objective.</p>
-                  <p>🗺️ Source data: </p>
                   <p>
-                    📈 Report: Percentages are calculated by summing fishing
-                    effort within MPAs in this plan, and dividing it by the
-                    total fishing effort of the planning area. If the plan
-                    includes multiple areas that overlap, the overlap is only
-                    counted once.
+                    🗺️ Source data: Shipping density data (ships no. per 1 sq.
+                    km) extracted from AIS system or 2 years (2018-2019).
+                  </p>
+                  <p>
+                    📈 Report: Percentages are calculated by summing shipping
+                    density counts within MPAs in this plan, and dividing it by
+                    the shipping density counts of the planning area. If the
+                    plan includes multiple areas that overlap, the overlap is
+                    only counted once.
                   </p>
                 </Trans>
               </Collapse>

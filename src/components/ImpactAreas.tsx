@@ -86,19 +86,18 @@ export const ImpactAreas: React.FunctionComponent = (props) => {
               <Collapse title={t("Learn more")}>
                 <Trans i18nKey="Impact Areas Card - learn more">
                   <p>
-                    🎯 Planning Objective: there is no specific objective/target
-                    for ecosystem services.
+                    ℹ️ Overview: The impact index is an index for all pressures
+                    and their relationship with ecosystem components. The index
+                    showcases the main impact areas.
                   </p>
-                  <p>
-                    🗺️ Source data: Ecological valuation map from HELCOM
-                    ecosystem service assessment.
-                  </p>
+                  <p>🎯 Planning Objective: No specific planning objective.</p>
+                  <p>🗺️ Source data: </p>
                   <p>
                     📈 Report: Percentages are calculated by summing the areas
                     of value within the MPAs in this plan, and dividing it by
-                    total ecosystem services value. If the plan includes
-                    multiple areas that overlap, the overlap is only counted
-                    once.
+                    the total impact value of the planning area. If the plan
+                    includes multiple areas that overlap, the overlap is only
+                    counted once.
                   </p>
                 </Trans>
               </Collapse>

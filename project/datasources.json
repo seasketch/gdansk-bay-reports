@@ -84,16 +84,8 @@
     "src": "data/src/Analytics/ImpactIndexFinal.tif"
   },
   {
-    "src": "data/src/Analytics/Fishing_effort_bottomtrawling.geojson",
-    "layerName": "Fishing_effort_bottomtrawling",
-    "geo_type": "vector",
     "datasourceId": "fishing_effort",
-    "formats": [
-      "fgb"
-    ],
-    "classKeys": [],
-    "created": "2023-10-16T21:29:27.884Z",
-    "lastUpdated": "2023-10-16T21:29:27.884Z",
+    "geo_type": "vector",
     "keyStats": {
       "total": {
         "total": {
@@ -103,8 +95,104 @@
         }
       }
     },
+    "formats": [
+      "fgb"
+    ],
+    "layerName": "Fishing_effort_bottomtrawling",
+    "classKeys": [],
+    "created": "2023-10-16T21:29:27.884Z",
+    "lastUpdated": "2023-10-16T21:29:27.884Z",
+    "src": "data/src/Analytics/Fishing_effort_bottomtrawling.geojson",
     "propertiesToKeep": [
       "SUM_kwfhr"
     ]
+  },
+  {
+    "datasourceId": "density_all",
+    "geo_type": "raster",
+    "keyStats": {
+      "total": {
+        "total": {
+          "count": null,
+          "sum": 123857716.00786862,
+          "area": null
+        }
+      }
+    },
+    "formats": [
+      "tif"
+    ],
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -3.40282e+38,
+    "created": "2023-10-17T17:57:06.221Z",
+    "lastUpdated": "2023-10-17T18:25:45.242Z",
+    "src": "data/src/Analytics/cleaned_density_all.tif"
+  },
+  {
+    "datasourceId": "density_fish",
+    "geo_type": "raster",
+    "keyStats": {
+      "total": {
+        "total": {
+          "count": null,
+          "sum": 31092347.01933007,
+          "area": null
+        }
+      }
+    },
+    "formats": [
+      "tif"
+    ],
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -3.40282e+38,
+    "created": "2023-10-17T17:57:43.167Z",
+    "lastUpdated": "2023-10-17T18:25:48.088Z",
+    "src": "data/src/Analytics/cleaned_density_fish.tif"
+  },
+  {
+    "datasourceId": "density_pass",
+    "geo_type": "raster",
+    "keyStats": {
+      "total": {
+        "total": {
+          "count": null,
+          "sum": 10045286.579400782,
+          "area": null
+        }
+      }
+    },
+    "formats": [
+      "tif"
+    ],
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -3.40282e+38,
+    "created": "2023-10-17T17:58:14.935Z",
+    "lastUpdated": "2023-10-17T18:25:50.720Z",
+    "src": "data/src/Analytics/cleaned_density_pass.tif"
+  },
+  {
+    "datasourceId": "density_pleas",
+    "geo_type": "raster",
+    "keyStats": {
+      "total": {
+        "total": {
+          "sum": 11826109.545880124,
+          "count": null,
+          "area": null
+        }
+      }
+    },
+    "formats": [
+      "tif"
+    ],
+    "measurementType": "quantitative",
+    "band": 1,
+    "noDataValue": -3.40282e+38,
+    "created": "2023-10-17T17:58:50.186Z",
+    "lastUpdated": "2023-10-17T18:25:53.530Z",
+    "src": "data/src/Analytics/cleaned_density_pleas.tif"
   }
 ]
