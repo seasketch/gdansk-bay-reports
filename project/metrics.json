@@ -6,10 +6,10 @@
             {
                 "classId": "gdansk_bay",
                 "display": "Gdansk Bay",
-                "datasourceId": "gdansk_bay",
-                "layerId": ""
+                "datasourceId": "gdansk_bay"
             }
-        ]
+        ],
+        "layerId": "EaY0FWHxV"
     },
     {
         "metricId": "ecosystemServiceValueOverlap",
@@ -19,7 +19,7 @@
                 "classId": "ecosystem_services",
                 "display": "Ecosystem Services",
                 "datasourceId": "ecosystem_services",
-                "layerId": ""
+                "layerId": "4F10OFh7h"
             }
         ]
     },
@@ -31,7 +31,7 @@
                 "classId": "impact_areas",
                 "display": "Impact Areas",
                 "datasourceId": "impact_areas",
-                "layerId": ""
+                "layerId": "g1U15P5c9"
             }
         ]
     },
@@ -43,7 +43,7 @@
                 "classId": "fishing_effort",
                 "display": "Bottom Trawling",
                 "datasourceId": "fishing_effort",
-                "layerId": ""
+                "layerId": "0ZLOQlktc"
             }
         ]
     },
@@ -55,25 +55,25 @@
                 "classId": "density_all",
                 "display": "All Shipping",
                 "datasourceId": "density_all",
-                "layerId": ""
+                "layerId": "t4gdpCHFL"
             },
             {
                 "classId": "density_fish",
                 "display": "Fishery Shipping",
                 "datasourceId": "density_fish",
-                "layerId": ""
+                "layerId": "HEgIRqspx"
             },
             {
                 "classId": "density_pass",
                 "display": "Passenger Shipping",
                 "datasourceId": "density_pass",
-                "layerId": ""
+                "layerId": "Q97nCXWvW"
             },
             {
                 "classId": "density_pleas",
                 "display": "Touristic Shipping",
                 "datasourceId": "density_pleas",
-                "layerId": ""
+                "layerId": "bNLrHSHA3"
             }
         ]
     },
@@ -142,6 +142,6 @@
               "datasourceId": "ecological_value"
           }
       ],
-      "layerId": ""
+      "layerId": "UU01_5SnC"
   }
 ]

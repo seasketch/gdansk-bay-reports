@@ -24,6 +24,8 @@ import {
   ToolbarCard,
   DataDownload,
   KeySection,
+  LayerToggle,
+  VerticalSpacer,
 } from "@seasketch/geoprocessing/client-ui";
 import styled from "styled-components";
 import project from "../../project";
@@ -75,6 +77,7 @@ export const SizeCard = () => {
 
   const notFoundString = t("Results not found");
   const sqKmLabel = t("km²");
+  const mapLabel = t("Map");
 
   /* i18next-extract-disable-next-line */
   const planningUnitName = t(project.basic.planningAreaName);
@@ -109,7 +112,17 @@ export const SizeCard = () => {
 
         return (
           <>
-            <ToolbarCard title={t("Size")}>
+            <ToolbarCard
+              title={t("Size")}
+              items={
+                <LayerToggle
+                  label={mapLabel}
+                  layerId={metricGroup.layerId}
+                  simple
+                />
+              }
+            >
+              <VerticalSpacer />
               <KeySection>
                 {t("This plan is")}{" "}
                 <b>

@@ -117,7 +117,7 @@ export const EcologicalValue: React.FunctionComponent = () => {
                         targetLabelStyle: "tight",
                         barHeight: 11,
                       },
-                      width: 30,
+                      width: 40,
                       targetValueFormatter: (
                         value: number,
                         row: number,
@@ -133,11 +133,6 @@ export const EcologicalValue: React.FunctionComponent = () => {
                             `${valueFormatter(value / 100, "percent0dig")}`;
                         }
                       },
-                    },
-                    {
-                      columnLabel: mapLabel,
-                      type: "layerToggle",
-                      width: 10,
                     },
                   ]}
                 />
