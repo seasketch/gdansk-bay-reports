@@ -5,9 +5,9 @@
     "formats": [
       "subdivided"
     ],
+    "precalc": false,
     "classKeys": [],
-    "url": "https://d3p1dsef9f0gjr.cloudfront.net/",
-    "precalc": false
+    "url": "https://d3p1dsef9f0gjr.cloudfront.net/"
   },
   {
     "datasourceId": "global-clipping-eez-land-union",
@@ -15,20 +15,18 @@
     "formats": [
       "subdivided"
     ],
+    "precalc": false,
     "classKeys": [],
-    "url": "https://d3muy0hbwp5qkl.cloudfront.net",
-    "precalc": false
+    "url": "https://d3muy0hbwp5qkl.cloudfront.net"
   },
   {
     "datasourceId": "world",
     "geo_type": "vector",
     "formats": [
-      "json", "fgb"
+      "json",
+      "fgb"
     ],
-    "layerName": "world",
-    "classKeys": [],
-    "url": "https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.fgb",
-    "propertiesToKeep": [],
+    "precalc": false,
     "metadata": {
       "name": "World Outline Polygon",
       "description": "World polygon for default project geography in seasketch geoprocessing proejcts",
@@ -37,261 +35,140 @@
       "publishDate": "20231018",
       "publishLink": ""
     },
-    "precalc": false
+    "layerName": "world",
+    "classKeys": [],
+    "url": "https://gp-global-datasources-datasets.s3.us-west-1.amazonaws.com/world.fgb"
   },
   {
     "datasourceId": "gdansk_bay",
     "geo_type": "vector",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": 1,
-          "sum": null,
-          "area": 5854375276.78823
-        }
-      }
-    },
     "formats": [
       "fgb"
     ],
+    "precalc": true,
     "layerName": "Clip_Study_area_PL",
     "classKeys": [],
     "created": "2023-10-16T17:52:32.878Z",
-    "lastUpdated": "2023-10-16T17:52:32.878Z",
+    "lastUpdated": "2023-11-07T19:37:50.551Z",
     "src": "data/src/Data_Received/SeaSketch_data_BalticSea_PL/Clip_Study_area_PL.shp",
-    "propertiesToKeep": [],
-    "precalc": true
+    "propertiesToKeep": []
   },
   {
     "datasourceId": "ecosystem_services",
     "geo_type": "raster",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": null,
-          "sum": 3043.7675150483847,
-          "area": null
-        }
-      }
-    },
     "formats": [
       "tif"
     ],
+    "precalc": true,
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.40282e+38,
     "created": "2023-10-16T20:21:18.173Z",
-    "lastUpdated": "2023-10-16T20:21:18.173Z",
-    "src": "data/src/Analytics/EcosystemServicePotential_aggreg_HELCOM.tif",
-    "precalc": true
+    "lastUpdated": "2023-11-07T19:37:50.752Z",
+    "src": "data/src/Analytics/EcosystemServicePotential_aggreg_HELCOM.tif"
   },
   {
     "datasourceId": "impact_areas",
     "geo_type": "raster",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": null,
-          "sum": 83650.541826725,
-          "area": null
-        }
-      }
-    },
     "formats": [
       "tif"
     ],
+    "precalc": true,
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.40282e+38,
     "created": "2023-10-16T21:01:00.356Z",
-    "lastUpdated": "2023-10-16T21:01:00.356Z",
-    "src": "data/src/Analytics/ImpactIndexFinal.tif",
-    "precalc": true
+    "lastUpdated": "2023-11-07T19:37:51.038Z",
+    "src": "data/src/Analytics/ImpactIndexFinal.tif"
   },
   {
     "datasourceId": "fishing_effort",
     "geo_type": "vector",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": 175,
-          "sum": null,
-          "area": 2728195880.7352824
-        }
-      }
-    },
     "formats": [
       "fgb"
     ],
+    "precalc": true,
     "layerName": "Fishing_effort_bottomtrawling",
     "classKeys": [],
     "created": "2023-10-16T21:29:27.884Z",
-    "lastUpdated": "2023-10-16T21:29:27.884Z",
+    "lastUpdated": "2023-11-07T19:37:51.129Z",
     "src": "data/src/Analytics/Fishing_effort_bottomtrawling.geojson",
     "propertiesToKeep": [
       "SUM_kwfhr"
-    ],
-    "precalc": true
+    ]
   },
   {
     "datasourceId": "density_all",
     "geo_type": "raster",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": null,
-          "sum": 123857716.00786862,
-          "area": null
-        }
-      }
-    },
     "formats": [
       "tif"
     ],
+    "precalc": true,
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.40282e+38,
     "created": "2023-10-17T17:57:06.221Z",
-    "lastUpdated": "2023-10-17T18:25:45.242Z",
-    "src": "data/src/Analytics/cleaned_density_all.tif",
-    "precalc": true
+    "lastUpdated": "2023-11-07T19:37:51.344Z",
+    "src": "data/src/Analytics/cleaned_density_all.tif"
   },
   {
     "datasourceId": "density_fish",
     "geo_type": "raster",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": null,
-          "sum": 31092347.01933007,
-          "area": null
-        }
-      }
-    },
     "formats": [
       "tif"
     ],
+    "precalc": true,
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.40282e+38,
     "created": "2023-10-17T17:57:43.167Z",
-    "lastUpdated": "2023-10-17T18:25:48.088Z",
-    "src": "data/src/Analytics/cleaned_density_fish.tif",
-    "precalc": true
+    "lastUpdated": "2023-11-07T19:37:51.562Z",
+    "src": "data/src/Analytics/cleaned_density_fish.tif"
   },
   {
     "datasourceId": "density_pass",
     "geo_type": "raster",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": null,
-          "sum": 10045286.579400782,
-          "area": null
-        }
-      }
-    },
     "formats": [
       "tif"
     ],
+    "precalc": true,
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.40282e+38,
     "created": "2023-10-17T17:58:14.935Z",
-    "lastUpdated": "2023-10-17T18:25:50.720Z",
-    "src": "data/src/Analytics/cleaned_density_pass.tif",
-    "precalc": true
+    "lastUpdated": "2023-11-07T19:37:51.753Z",
+    "src": "data/src/Analytics/cleaned_density_pass.tif"
   },
   {
     "datasourceId": "density_pleas",
     "geo_type": "raster",
-    "keyStats": {
-      "total": {
-        "total": {
-          "count": null,
-          "sum": 11826109.545880124,
-          "area": null
-        }
-      }
-    },
     "formats": [
       "tif"
     ],
+    "precalc": true,
     "measurementType": "quantitative",
     "band": 1,
     "noDataValue": -3.40282e+38,
     "created": "2023-10-17T17:58:50.186Z",
-    "lastUpdated": "2023-10-17T18:25:53.530Z",
-    "src": "data/src/Analytics/cleaned_density_pleas.tif",
-    "precalc": true
+    "lastUpdated": "2023-11-07T19:37:51.971Z",
+    "src": "data/src/Analytics/cleaned_density_pleas.tif"
   },
   {
-    "src": "data/src/Analytics/Environmental_areas_valuability.geojson",
-    "layerName": "Environmental_areas_valuability",
-    "geo_type": "vector",
     "datasourceId": "ecological_value",
+    "geo_type": "vector",
     "formats": [
       "fgb"
     ],
+    "precalc": true,
+    "layerName": "Environmental_areas_valuability",
     "classKeys": [
       "value"
     ],
     "created": "2023-10-17T18:48:00.038Z",
-    "lastUpdated": "2023-10-17T18:48:00.038Z",
-    "keyStats": {
-      "value": {
-        "1": {
-          "count": 5122,
-          "area": 1098813932.0145705
-        },
-        "2": {
-          "count": 911,
-          "area": 180007103.83230695
-        },
-        "3": {
-          "count": 1764,
-          "area": 378524579.53203654
-        },
-        "4": {
-          "count": 632,
-          "area": 128218538.08695313
-        },
-        "5": {
-          "count": 512,
-          "area": 98489666.83062498
-        },
-        "6": {
-          "count": 352,
-          "area": 71143460.3434363
-        },
-        "7": {
-          "count": 150,
-          "area": 27595199.617424686
-        },
-        "8": {
-          "count": 266,
-          "area": 48489385.75524597
-        },
-        "9": {
-          "count": 396,
-          "area": 78064880.14654462
-        },
-        "10": {
-          "count": 43,
-          "area": 9176543.69309578
-        }
-      },
-      "total": {
-        "total": {
-          "count": 10148,
-          "sum": null,
-          "area": 2118523289.8522384
-        }
-      }
-    },
+    "lastUpdated": "2023-11-07T19:37:52.490Z",
+    "src": "data/src/Analytics/Environmental_areas_valuability.geojson",
     "propertiesToKeep": [
       "value"
-    ],
-    "precalc": true
+    ]
   }
 ]

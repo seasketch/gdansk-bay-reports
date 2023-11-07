@@ -8,10 +8,10 @@ import {
   valueFormatter,
   toPercentMetric,
   sortMetricsDisplayOrder,
-  isSketchCollection,
   MetricGroup,
   firstMatchingMetric,
   roundLower,
+  Geography,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ClassTable,
@@ -22,7 +22,6 @@ import {
   Table,
   useSketchProperties,
   ToolbarCard,
-  DataDownload,
   KeySection,
   LayerToggle,
   VerticalSpacer,
@@ -145,7 +144,7 @@ export const SizeCard: React.FunctionComponent<GeoProp> = (props) => {
 
               {isCollection && (
                 <Collapse title={t("Show by MPA")}>
-                  {genNetworkSizeTable(data, metricGroup, t)}
+                  {genNetworkSizeTable(data, metricGroup, curGeography, t)}
                 </Collapse>
               )}
               <Collapse title={t("Learn more")}>
@@ -186,10 +185,9 @@ export const SizeCard: React.FunctionComponent<GeoProp> = (props) => {
 const genSingleSizeTable = (
   data: ReportResult,
   mg: MetricGroup,
+  curGeography: Geography,
   t: TFunction
 ) => {
-  const boundaryLabel = t("Boundary");
-  const foundWithinLabel = t("Found Within Plan");
   const areaWithinLabel = t("Area Within Plan");
   const areaPercWithinLabel = t("% Within Plan");
   const mapLabel = t("Map");
@@ -200,7 +198,11 @@ const genSingleSizeTable = (
     (m) => m.sketchId === data.sketch.properties.id
   );
 
-  const boundaryTotalMetrics = project.getPrecalcMetrics(mg, "area");
+  const boundaryTotalMetrics = project.getPrecalcMetrics(
+    mg,
+    "area",
+    curGeography.geographyId
+  );
 
   const finalMetrics = sortMetricsDisplayOrder(
     [
@@ -282,6 +284,7 @@ const genSingleSizeTable = (
 const genNetworkSizeTable = (
   data: ReportResult,
   mg: MetricGroup,
+  curGeography: Geography,
   t: TFunction
 ) => {
   const sketches = toNullSketchArray(data.sketch);
@@ -291,7 +294,11 @@ const genNetworkSizeTable = (
     (m) => m.sketchId && sketchIds.includes(m.sketchId)
   );
 
-  const boundaryTotalMetrics = project.getPrecalcMetrics(mg, "area");
+  const boundaryTotalMetrics = project.getPrecalcMetrics(
+    mg,
+    "area",
+    curGeography.geographyId
+  );
 
   const finalMetrics = [
     ...sketchMetrics,

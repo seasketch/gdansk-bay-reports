@@ -5,15 +5,7 @@
     "classId": "ecological_value-1",
     "sketchId": null,
     "groupId": null,
-    "value": 1098813631.3588467
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-1",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 1098813631.3588486
   },
   {
     "geographyId": "world",
@@ -21,15 +13,7 @@
     "classId": "ecological_value-10",
     "sketchId": null,
     "groupId": null,
-    "value": 9176600.312822545
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-10",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 9176600.312822547
   },
   {
     "geographyId": "world",
@@ -37,15 +21,7 @@
     "classId": "ecological_value-2",
     "sketchId": null,
     "groupId": null,
-    "value": 180006974.43778995
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-2",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 180006974.43778986
   },
   {
     "geographyId": "world",
@@ -53,15 +29,7 @@
     "classId": "ecological_value-3",
     "sketchId": null,
     "groupId": null,
-    "value": 378524811.0329024
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-3",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 378524811.03290296
   },
   {
     "geographyId": "world",
@@ -69,15 +37,7 @@
     "classId": "ecological_value-4",
     "sketchId": null,
     "groupId": null,
-    "value": 128218907.04691736
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-4",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 128218907.04691735
   },
   {
     "geographyId": "world",
@@ -85,15 +45,7 @@
     "classId": "ecological_value-5",
     "sketchId": null,
     "groupId": null,
-    "value": 98489408.55497126
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-5",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 98489408.5549712
   },
   {
     "geographyId": "world",
@@ -101,15 +53,7 @@
     "classId": "ecological_value-6",
     "sketchId": null,
     "groupId": null,
-    "value": 71143544.05825664
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-6",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 71143544.05825667
   },
   {
     "geographyId": "world",
@@ -117,15 +61,7 @@
     "classId": "ecological_value-7",
     "sketchId": null,
     "groupId": null,
-    "value": 27595165.030666225
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-7",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 27595165.030666213
   },
   {
     "geographyId": "world",
@@ -133,15 +69,7 @@
     "classId": "ecological_value-8",
     "sketchId": null,
     "groupId": null,
-    "value": 48489429.269877665
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-8",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 48489429.26987763
   },
   {
     "geographyId": "world",
@@ -149,15 +77,7 @@
     "classId": "ecological_value-9",
     "sketchId": null,
     "groupId": null,
-    "value": 78064741.68654898
-  },
-  {
-    "geographyId": "world",
-    "metricId": "area",
-    "classId": "ecological_value-9",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
+    "value": 78064741.68654896
   },
   {
     "geographyId": "world",
@@ -165,7 +85,7 @@
     "classId": "ecological_value-total",
     "sketchId": null,
     "groupId": null,
-    "value": 2118523212.7896042
+    "value": 2118523212.7896066
   },
   {
     "geographyId": "world",
@@ -173,7 +93,7 @@
     "classId": "fishing_effort-total",
     "sketchId": null,
     "groupId": null,
-    "value": 2728195907.797326
+    "value": 2728195907.7973266
   },
   {
     "geographyId": "world",
@@ -194,26 +114,10 @@
   {
     "geographyId": "world",
     "metricId": "count",
-    "classId": "ecological_value-1",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
     "classId": "ecological_value-10",
     "sketchId": null,
     "groupId": null,
     "value": 43
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
-    "classId": "ecological_value-10",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
   },
   {
     "geographyId": "world",
@@ -226,26 +130,10 @@
   {
     "geographyId": "world",
     "metricId": "count",
-    "classId": "ecological_value-2",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
     "classId": "ecological_value-3",
     "sketchId": null,
     "groupId": null,
     "value": 1764
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
-    "classId": "ecological_value-3",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
   },
   {
     "geographyId": "world",
@@ -258,26 +146,10 @@
   {
     "geographyId": "world",
     "metricId": "count",
-    "classId": "ecological_value-4",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
     "classId": "ecological_value-5",
     "sketchId": null,
     "groupId": null,
     "value": 512
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
-    "classId": "ecological_value-5",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
   },
   {
     "geographyId": "world",
@@ -290,26 +162,10 @@
   {
     "geographyId": "world",
     "metricId": "count",
-    "classId": "ecological_value-6",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
     "classId": "ecological_value-7",
     "sketchId": null,
     "groupId": null,
     "value": 150
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
-    "classId": "ecological_value-7",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
   },
   {
     "geographyId": "world",
@@ -322,26 +178,10 @@
   {
     "geographyId": "world",
     "metricId": "count",
-    "classId": "ecological_value-8",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
     "classId": "ecological_value-9",
     "sketchId": null,
     "groupId": null,
     "value": 396
-  },
-  {
-    "geographyId": "world",
-    "metricId": "count",
-    "classId": "ecological_value-9",
-    "sketchId": null,
-    "groupId": null,
-    "value": 0
   },
   {
     "geographyId": "world",
