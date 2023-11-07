@@ -10,17 +10,26 @@ import {
   sortMetrics,
   overlapRaster,
   getCogFilename,
+  DefaultExtraParams,
+  getFirstFromParam,
 } from "@seasketch/geoprocessing";
-import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
+import { loadCog, loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import project from "../../project";
+import { clipToGeography } from "../util/clipToGeography";
 
 const metricGroup = project.getMetricGroup("shippingValueOverlap");
 
 export async function shippingValueOverlap(
-  sketch: Sketch<Polygon> | SketchCollection<Polygon>
+  sketch: Sketch<Polygon> | SketchCollection<Polygon>,
+  extraParams: DefaultExtraParams = {}
 ): Promise<ReportResult> {
-  const box = sketch.bbox || bbox(sketch);
+  const geographyId = getFirstFromParam("geographyIds", extraParams);
+  const curGeography = project.getGeographyById(geographyId, {
+    fallbackGroup: "default-boundary",
+  });
+  const clippedSketch = await clipToGeography(sketch, curGeography);
+
   const metrics: Metric[] = (
     await Promise.all(
       metricGroup.classes.map(async (curClass) => {
@@ -28,16 +37,14 @@ export async function shippingValueOverlap(
         if (!curClass.datasourceId)
           throw new Error(`Expected datasourceId for ${curClass}`);
         const url = `${project.dataBucketUrl()}${getCogFilename(
-          curClass.datasourceId
+          project.getInternalRasterDatasourceById(curClass.datasourceId)
         )}`;
-        const raster = await loadCogWindow(url, {
-          windowBox: box,
-        });
+        const raster = await loadCog(url);
         // start analysis as soon as source load done
         const overlapResult = await overlapRaster(
           metricGroup.metricId,
           raster,
-          sketch
+          clippedSketch
         );
         return overlapResult.map(
           (metrics): Metric => ({
@@ -55,7 +62,7 @@ export async function shippingValueOverlap(
 
   return {
     metrics: sortMetrics(rekeyMetrics(metrics)),
-    sketch: toNullSketch(sketch, true),
+    sketch: toNullSketch(clippedSketch, true),
   };
 }
 

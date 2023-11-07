@@ -17,15 +17,24 @@ import {
 } from "@seasketch/geoprocessing/client-core";
 import project from "../../project";
 import { Trans, useTranslation } from "react-i18next";
+import { GeoProp } from "../types";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
-export const ShippingDensity: React.FunctionComponent = (props) => {
+export const ShippingDensity: React.FunctionComponent<GeoProp> = (props) => {
   const [{ isCollection }] = useSketchProperties();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+
+  const curGeography = project.getGeographyById(props.geographyId, {
+    fallbackGroup: "default-boundary",
+  });
 
   const metricGroup = project.getMetricGroup("shippingValueOverlap");
-  const precalcMetrics = project.getPrecalcMetrics(metricGroup, "sum");
+  const precalcMetrics = project.getPrecalcMetrics(
+    metricGroup,
+    "sum",
+    curGeography.geographyId
+  );
 
   const mapLabel = t("Map");
   const sectorLabel = t("Sector");
@@ -47,7 +56,9 @@ export const ShippingDensity: React.FunctionComponent = (props) => {
 
           const percMetricIdName = `${metricGroup.metricId}Perc`;
           const percMetrics = metricsWithSketchId(
-            toPercentMetric(metrics, precalcMetrics, percMetricIdName),
+            toPercentMetric(metrics, precalcMetrics, {
+              metricIdOverride: percMetricIdName,
+            }),
             [data.sketch.properties.id]
           );
 

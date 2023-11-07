@@ -1,44 +1,44 @@
 {
   "metrics": [
     {
-      "metricId": "shippingValueOverlap",
-      "sketchId": "21216",
-      "classId": "density_all",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "shippingValueOverlap",
+      "classId": "density_all",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 17251244.123825,
       "extra": {
         "sketchName": "large-mpa"
       }
     },
     {
-      "metricId": "shippingValueOverlap",
-      "sketchId": "21216",
-      "classId": "density_fish",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "shippingValueOverlap",
+      "classId": "density_fish",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 4350221.621872,
       "extra": {
         "sketchName": "large-mpa"
       }
     },
     {
-      "metricId": "shippingValueOverlap",
-      "sketchId": "21216",
-      "classId": "density_pass",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "shippingValueOverlap",
+      "classId": "density_pass",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 1809455.346715,
       "extra": {
         "sketchName": "large-mpa"
       }
     },
     {
-      "metricId": "shippingValueOverlap",
-      "sketchId": "21216",
-      "classId": "density_pleas",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "shippingValueOverlap",
+      "classId": "density_pleas",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 813942.463893,
       "extra": {
         "sketchName": "large-mpa"

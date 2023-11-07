@@ -12,15 +12,25 @@ import {
   Feature,
   isInternalVectorDatasource,
   getFlatGeobufFilename,
+  DefaultExtraParams,
+  getFirstFromParam,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import project from "../../project";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
+import { clipToGeography } from "../util/clipToGeography";
 
 export async function fishingEffortValueOverlap(
-  sketch: Sketch<Polygon> | SketchCollection<Polygon>
+  sketch: Sketch<Polygon> | SketchCollection<Polygon>,
+  extraParams: DefaultExtraParams = {}
 ): Promise<ReportResult> {
-  const box = sketch.bbox || bbox(sketch);
+  const geographyId = getFirstFromParam("geographyIds", extraParams);
+  const curGeography = project.getGeographyById(geographyId, {
+    fallbackGroup: "default-boundary",
+  });
+  const clippedSketch = await clipToGeography(sketch, curGeography);
+  const box = clippedSketch.bbox || bbox(clippedSketch);
+
   const metricGroup = project.getMetricGroup("fishingEffortValueOverlap");
   const sumProperty = "SUM_kwfhr";
 
@@ -73,7 +83,7 @@ export async function fishingEffortValueOverlap(
         const overlapResult = await overlapFeatures(
           metricGroup.metricId,
           polysByBoundary[curClass.classId],
-          sketch,
+          clippedSketch,
           {
             operation: "sum",
             sumProperty: sumProperty,
@@ -96,7 +106,7 @@ export async function fishingEffortValueOverlap(
 
   return {
     metrics: sortMetrics(rekeyMetrics(metrics)),
-    sketch: toNullSketch(sketch, true),
+    sketch: toNullSketch(clippedSketch, true),
   };
 }
 

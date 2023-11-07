@@ -1,11 +1,11 @@
 {
   "metrics": [
     {
-      "metricId": "fishingEffortValueOverlap",
-      "sketchId": "21216",
-      "classId": "fishing_effort",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "fishingEffortValueOverlap",
+      "classId": "fishing_effort",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 1543238.033333,
       "extra": {
         "sketchName": "large-mpa"

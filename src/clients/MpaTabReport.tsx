@@ -9,6 +9,7 @@ const enableAllTabs = false;
 
 const MpaTabReport = () => {
   const { t } = useTranslation();
+  const geographyId = "world";
   const viabilityId = "viability";
   const representationId = "representation";
   const segments = [
@@ -26,10 +27,10 @@ const MpaTabReport = () => {
         />
       </div>
       <ReportPage hidden={!enableAllTabs && tab !== viabilityId}>
-        <ViabilityPage />
+        <ViabilityPage geographyId={geographyId} />
       </ReportPage>
       <ReportPage hidden={!enableAllTabs && tab !== representationId}>
-        <RepresentationPage />
+        <RepresentationPage geographyId={geographyId} />
       </ReportPage>
     </>
   );

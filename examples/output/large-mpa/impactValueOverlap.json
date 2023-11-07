@@ -1,11 +1,11 @@
 {
   "metrics": [
     {
-      "metricId": "impactValueOverlap",
-      "sketchId": "21216",
-      "classId": "impact_areas",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "impactValueOverlap",
+      "classId": "impact_areas",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 12269.144341,
       "extra": {
         "sketchName": "large-mpa"

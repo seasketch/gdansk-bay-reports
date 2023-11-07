@@ -11,15 +11,25 @@ import {
   getFlatGeobufFilename,
   isInternalVectorDatasource,
   overlapFeatures,
+  getFirstFromParam,
+  DefaultExtraParams,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import project from "../../project";
+import { clipToGeography } from "../util/clipToGeography";
 
 export async function evAreaOverlap(
-  sketch: Sketch<Polygon> | SketchCollection<Polygon>
+  sketch: Sketch<Polygon> | SketchCollection<Polygon>,
+  extraParams: DefaultExtraParams = {}
 ): Promise<ReportResult> {
-  const box = sketch.bbox || bbox(sketch);
+  const geographyId = getFirstFromParam("geographyIds", extraParams);
+  const curGeography = project.getGeographyById(geographyId, {
+    fallbackGroup: "default-boundary",
+  });
+  const clippedSketch = await clipToGeography(sketch, curGeography);
+  const box = clippedSketch.bbox || bbox(clippedSketch);
+
   const metricGroup = project.getMetricGroup("evAreaOverlap");
 
   let cachedFeatures: Record<string, Feature<Polygon>[]> = {};
@@ -74,7 +84,7 @@ export async function evAreaOverlap(
         const overlapResult = await overlapFeatures(
           metricGroup.metricId,
           polysByBoundary[curClass.classId],
-          sketch
+          clippedSketch
         );
         return overlapResult.map(
           (metric): Metric => ({
@@ -92,7 +102,7 @@ export async function evAreaOverlap(
 
   return {
     metrics: rekeyMetrics(metrics),
-    sketch: toNullSketch(sketch, true),
+    sketch: toNullSketch(clippedSketch, true),
   };
 }
 

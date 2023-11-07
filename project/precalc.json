@@ -1,0 +1,418 @@
+[
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-1",
+    "sketchId": null,
+    "groupId": null,
+    "value": 1098813631.3588467
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-1",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-10",
+    "sketchId": null,
+    "groupId": null,
+    "value": 9176600.312822545
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-10",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-2",
+    "sketchId": null,
+    "groupId": null,
+    "value": 180006974.43778995
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-2",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-3",
+    "sketchId": null,
+    "groupId": null,
+    "value": 378524811.0329024
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-3",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-4",
+    "sketchId": null,
+    "groupId": null,
+    "value": 128218907.04691736
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-4",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-5",
+    "sketchId": null,
+    "groupId": null,
+    "value": 98489408.55497126
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-5",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-6",
+    "sketchId": null,
+    "groupId": null,
+    "value": 71143544.05825664
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-6",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-7",
+    "sketchId": null,
+    "groupId": null,
+    "value": 27595165.030666225
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-7",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-8",
+    "sketchId": null,
+    "groupId": null,
+    "value": 48489429.269877665
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-8",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-9",
+    "sketchId": null,
+    "groupId": null,
+    "value": 78064741.68654898
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-9",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "ecological_value-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 2118523212.7896042
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "fishing_effort-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 2728195907.797326
+  },
+  {
+    "geographyId": "world",
+    "metricId": "area",
+    "classId": "gdansk_bay-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 5854373419.759122
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-1",
+    "sketchId": null,
+    "groupId": null,
+    "value": 5122
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-1",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-10",
+    "sketchId": null,
+    "groupId": null,
+    "value": 43
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-10",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-2",
+    "sketchId": null,
+    "groupId": null,
+    "value": 911
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-2",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-3",
+    "sketchId": null,
+    "groupId": null,
+    "value": 1764
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-3",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-4",
+    "sketchId": null,
+    "groupId": null,
+    "value": 632
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-4",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-5",
+    "sketchId": null,
+    "groupId": null,
+    "value": 512
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-5",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-6",
+    "sketchId": null,
+    "groupId": null,
+    "value": 352
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-6",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-7",
+    "sketchId": null,
+    "groupId": null,
+    "value": 150
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-7",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-8",
+    "sketchId": null,
+    "groupId": null,
+    "value": 266
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-8",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-9",
+    "sketchId": null,
+    "groupId": null,
+    "value": 396
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-9",
+    "sketchId": null,
+    "groupId": null,
+    "value": 0
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "ecological_value-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 10148
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "fishing_effort-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 175
+  },
+  {
+    "geographyId": "world",
+    "metricId": "count",
+    "classId": "gdansk_bay-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 1
+  },
+  {
+    "geographyId": "world",
+    "metricId": "sum",
+    "classId": "density_all-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 123857716.00786862
+  },
+  {
+    "geographyId": "world",
+    "metricId": "sum",
+    "classId": "density_fish-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 31092347.01933007
+  },
+  {
+    "geographyId": "world",
+    "metricId": "sum",
+    "classId": "density_pass-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 10045286.579400782
+  },
+  {
+    "geographyId": "world",
+    "metricId": "sum",
+    "classId": "density_pleas-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 11826109.545880124
+  },
+  {
+    "geographyId": "world",
+    "metricId": "sum",
+    "classId": "ecosystem_services-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 3043.7675150483847
+  },
+  {
+    "geographyId": "world",
+    "metricId": "sum",
+    "classId": "impact_areas-total",
+    "sketchId": null,
+    "groupId": null,
+    "value": 83650.541826725
+  }
+]

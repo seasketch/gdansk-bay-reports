@@ -1,11 +1,11 @@
 {
   "metrics": [
     {
-      "metricId": "boundaryAreaOverlap",
-      "sketchId": "21216",
-      "classId": "gdansk_bay",
-      "groupId": null,
       "geographyId": null,
+      "metricId": "boundaryAreaOverlap",
+      "classId": "gdansk_bay",
+      "sketchId": "21216",
+      "groupId": null,
       "value": 742627482.488165,
       "extra": {
         "sketchName": "large-mpa"

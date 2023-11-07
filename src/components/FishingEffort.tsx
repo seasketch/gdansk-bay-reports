@@ -18,18 +18,21 @@ import {
 import project from "../../project";
 import { Trans, useTranslation } from "react-i18next";
 import fishingEffortTotalMetrics from "../../data/bin/fishingEffort.json";
+import { GeoProp } from "../types";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
-const precalcMetrics = fishingEffortTotalMetrics.metrics;
 
-export const FishingEffort: React.FunctionComponent = (props) => {
+export const FishingEffort: React.FunctionComponent<GeoProp> = (props) => {
   const [{ isCollection }] = useSketchProperties();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+
   const metricGroup = project.getMetricGroup("fishingEffortValueOverlap");
+  const precalcMetrics = fishingEffortTotalMetrics.metrics;
+
   const mapLabel = t("Map");
   const effort = t("Fishing Effort");
   const percValueLabel = t("% Within Plan");
-  const hoursLabel = t("hours");
+  const hoursLabel = t("kW hours");
 
   return (
     <>
@@ -48,7 +51,7 @@ export const FishingEffort: React.FunctionComponent = (props) => {
               ...toPercentMetric(
                 data.metrics.filter((m) => m.metricId === metricGroup.metricId),
                 precalcMetrics,
-                percMetricIdName
+                { metricIdOverride: percMetricIdName }
               ),
             ],
             [data.sketch.properties.id]
@@ -113,7 +116,7 @@ export const FishingEffort: React.FunctionComponent = (props) => {
               <Collapse title={t("Learn more")}>
                 <Trans i18nKey="Fishing Effort Card - learn more">
                   <p>
-                    ℹ️ Overview: Hours at sea is used as a measure of fishing
+                    ℹ️ Overview: kW hours is used as a measure of fishing
                     effort. This report is specifically focused on bottom
                     trawling, a fishing practice that herds and captures the
                     target species, like ground fish or crabs, by towing a net

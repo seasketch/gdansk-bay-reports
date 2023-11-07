@@ -17,14 +17,23 @@ import {
 } from "@seasketch/geoprocessing/client-core";
 import project from "../../project";
 import { Trans, useTranslation } from "react-i18next";
+import { GeoProp } from "../types";
 
-export const EcosystemServices: React.FunctionComponent = (props) => {
+export const EcosystemServices: React.FunctionComponent<GeoProp> = (props) => {
   const [{ isCollection }] = useSketchProperties();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+
+  const curGeography = project.getGeographyById(props.geographyId, {
+    fallbackGroup: "default-boundary",
+  });
+
   const metricGroup = project.getMetricGroup("ecosystemServiceValueOverlap");
-  const precalcMetrics = project.getPrecalcMetrics(metricGroup, "sum");
+  const precalcMetrics = project.getPrecalcMetrics(
+    metricGroup,
+    "sum",
+    curGeography.geographyId
+  );
   const mapLabel = t("Map");
-  const sectorLabel = t("Sector");
   const percValueLabel = t("% Value Found Within Plan");
 
   return (

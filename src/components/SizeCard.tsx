@@ -33,6 +33,7 @@ import { Metric, squareMeterToKilometer } from "@seasketch/geoprocessing";
 import Translator from "../components/TranslatorAsync";
 import { Trans, useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
+import { GeoProp } from "../types";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
@@ -69,11 +70,20 @@ const TableStyled = styled(ReportTableStyled)`
   }
 `;
 
-export const SizeCard = () => {
+export const SizeCard: React.FunctionComponent<GeoProp> = (props) => {
   const [{ isCollection }] = useSketchProperties();
   const { t } = useTranslation();
+
+  const curGeography = project.getGeographyById(props.geographyId, {
+    fallbackGroup: "default-boundary",
+  });
+
   const metricGroup = project.getMetricGroup("boundaryAreaOverlap", t);
-  const precalcMetrics = project.getPrecalcMetrics(metricGroup, "area");
+  const precalcMetrics = project.getPrecalcMetrics(
+    metricGroup,
+    "area",
+    curGeography.geographyId
+  );
 
   const notFoundString = t("Results not found");
   const sqKmLabel = t("km²");
@@ -195,11 +205,9 @@ const genSingleSizeTable = (
   const finalMetrics = sortMetricsDisplayOrder(
     [
       ...singleMetrics,
-      ...toPercentMetric(
-        singleMetrics,
-        boundaryTotalMetrics,
-        project.getMetricGroupPercId(mg)
-      ),
+      ...toPercentMetric(singleMetrics, boundaryTotalMetrics, {
+        metricIdOverride: project.getMetricGroupPercId(mg),
+      }),
     ],
     "classId",
     ["eez", "offshore", "contiguous"]
@@ -287,11 +295,9 @@ const genNetworkSizeTable = (
 
   const finalMetrics = [
     ...sketchMetrics,
-    ...toPercentMetric(
-      sketchMetrics,
-      boundaryTotalMetrics,
-      project.getMetricGroupPercId(mg)
-    ),
+    ...toPercentMetric(sketchMetrics, boundaryTotalMetrics, {
+      metricIdOverride: project.getMetricGroupPercId(mg),
+    }),
   ];
 
   const aggMetrics = nestMetrics(finalMetrics, [
@@ -362,7 +368,7 @@ const genNetworkSizeTable = (
 export const SizeCardReportClient = () => {
   return (
     <Translator>
-      <SizeCard />
+      <SizeCard geographyId="world" />
     </Translator>
   );
 };

@@ -24,16 +24,24 @@ import {
 import project from "../../project";
 import Translator from "./TranslatorAsync";
 import { Trans, useTranslation } from "react-i18next";
-import { basic } from "./SizeCard.stories";
+import { GeoProp } from "../types";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
-export const EcologicalValue: React.FunctionComponent = () => {
+export const EcologicalValue: React.FunctionComponent<GeoProp> = (props) => {
   const [{ isCollection }] = useSketchProperties();
   const { t } = useTranslation();
 
+  const curGeography = project.getGeographyById(props.geographyId, {
+    fallbackGroup: "default-boundary",
+  });
+
   const metricGroup = project.getMetricGroup("evAreaOverlap", t);
-  const precalcMetrics = project.getPrecalcMetrics(metricGroup, "area");
+  const precalcMetrics = project.getPrecalcMetrics(
+    metricGroup,
+    "area",
+    curGeography.geographyId
+  );
 
   const mapLabel = t("Map");
   const speciesLabel = t("Ecological Value");
@@ -47,6 +55,7 @@ export const EcologicalValue: React.FunctionComponent = () => {
       <ResultsCard
         title={reportTitleLabel}
         functionName="evAreaOverlap"
+        extraParams={{ geographyIds: [curGeography.geographyId] }}
         useChildCard
       >
         {(data: ReportResult) => {
@@ -56,11 +65,9 @@ export const EcologicalValue: React.FunctionComponent = () => {
 
           const finalMetrics = [
             ...singleMetrics,
-            ...toPercentMetric(
-              singleMetrics,
-              precalcMetrics,
-              project.getMetricGroupPercId(metricGroup)
-            ),
+            ...toPercentMetric(singleMetrics, precalcMetrics, {
+              metricIdOverride: project.getMetricGroupPercId(metricGroup),
+            }),
           ];
 
           return (
